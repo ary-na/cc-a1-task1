@@ -18,3 +18,4 @@ https://stackoverflow.com/questions/49734284/flask-application-with-multiple-vie
 https://flask.palletsprojects.com/en/2.0.x/patterns/packages/
 
 https://flask.palletsprojects.com/en/2.1.x/tutorial/layout/
+
