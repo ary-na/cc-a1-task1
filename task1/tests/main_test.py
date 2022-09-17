@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import main
+import task1.__init__
 
 
 def test_index():
-    main.app.testing = True
-    client = main.app.test_client()
+    task1.main.app.testing = True
+    client = task1.main.app.test_client()
 
     r = client.get('/')
     assert r.status_code == 200

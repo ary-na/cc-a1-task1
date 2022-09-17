@@ -10,3 +10,11 @@ For more information visit [Academic Integrity at RMIT](https://www.rmit.edu.au/
 https://getbootstrap.com
 
 https://www.techwithtim.net/tutorials/flask/adding-bootstrap/
+
+https://stackoverflow.com/questions/73012152/importerror-cannot-import-name-app-from-partially-initialized-module-market
+
+https://stackoverflow.com/questions/49734284/flask-application-with-multiple-views-how-does-flask-run-work-in-this-case
+
+https://flask.palletsprojects.com/en/2.0.x/patterns/packages/
+
+https://flask.palletsprojects.com/en/2.1.x/tutorial/layout/
