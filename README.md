@@ -19,3 +19,8 @@ https://flask.palletsprojects.com/en/2.0.x/patterns/packages/
 
 https://flask.palletsprojects.com/en/2.1.x/tutorial/layout/
 
+https://pythonprogramming.net/flask-registration-tutorial/?completed=/flask-user-registration-form-tutorial/
+
+https://pythonspot.com/flask-web-forms/
+
+https://www.onlinetutorialspoint.com/flask/python-flask-login-form-example.html
