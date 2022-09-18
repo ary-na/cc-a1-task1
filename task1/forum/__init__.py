@@ -16,12 +16,15 @@
 # [START gae_python3_render_template]
 
 from flask import Flask
+from task1.config import Config
 
 app = Flask(__name__)
 
-import task1.views.forum
+app.config.from_object(Config)
 
-import task1.views.auth
+import task1.forum.views.auth
+
+import task1.forum.views.forum
 
 # [END gae_python3_render_template]
 # [END gae_python38_render_template]

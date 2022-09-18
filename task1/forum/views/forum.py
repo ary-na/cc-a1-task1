@@ -2,7 +2,7 @@ import datetime
 
 from flask import render_template
 
-from task1.__init__ import app
+from task1.forum.__init__ import app
 
 
 @app.route('/')

@@ -1,5 +1,4 @@
-
-from task1.__init__ import app
+from task1.forum.__init__ import app
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
