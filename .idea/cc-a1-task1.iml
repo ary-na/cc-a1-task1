@@ -16,6 +16,8 @@
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
       <list>
+        <option value="$MODULE_DIR$/task1/forum/templates/forum" />
+        <option value="$MODULE_DIR$/task1/templates" />
         <option value="$MODULE_DIR$/task1/forum/templates" />
       </list>
     </option>
