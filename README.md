@@ -24,3 +24,7 @@ https://pythonprogramming.net/flask-registration-tutorial/?completed=/flask-user
 https://pythonspot.com/flask-web-forms/
 
 https://www.onlinetutorialspoint.com/flask/python-flask-login-form-example.html
+
+https://www.codersdiaries.com/blog/flask-project-structure
+
+https://stackoverflow.com/questions/45020963/modulenotfounderror-no-module-named-models
