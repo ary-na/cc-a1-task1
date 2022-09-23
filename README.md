@@ -31,3 +31,10 @@ https://stackoverflow.com/questions/45020963/modulenotfounderror-no-module-named
 
 https://cloud.google.com/datastore/docs/concepts/entities#datastore-datastore-lookup-python
 
+https://cloud.google.com/datastore/docs/concepts/entities#datastore-datastore-update-python
+
+https://cloud.google.com/datastore/docs/concepts/queries
+
+https://cloud.google.com/storage/docs/downloading-objects#prereq-code-samples
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/modelclass
