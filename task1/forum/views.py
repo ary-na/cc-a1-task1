@@ -4,7 +4,7 @@ from flask import Blueprint, request, url_for, redirect, render_template, flash
 from flask import render_template, request, flash
 from google.cloud import datastore
 
-from .models import LoginForm
+from .models import LoginForm, init_users
 
 forum = Blueprint('forum', __name__, template_folder="templates/forum")
 
@@ -12,16 +12,10 @@ forum = Blueprint('forum', __name__, template_folder="templates/forum")
 @forum.route('/')
 def index():
     client = datastore.Client()
-    key = client.key('user')
-    user = client.get(key)
-    if user["id"] == 's39109020':
-        entity = datastore.Entity(key=client.key('user'))
-
-        entity.update({
-            'id': '22222222'
-        })
-
-        client.put(entity)
+    query = client.query(kind="user")
+    results = list(query.fetch(1))
+    if results.__len__() == 0:
+        init_users()
 
     return render_template('index.html')
 
