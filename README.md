@@ -28,3 +28,6 @@ https://www.onlinetutorialspoint.com/flask/python-flask-login-form-example.html
 https://www.codersdiaries.com/blog/flask-project-structure
 
 https://stackoverflow.com/questions/45020963/modulenotfounderror-no-module-named-models
+
+https://cloud.google.com/datastore/docs/concepts/entities#datastore-datastore-lookup-python
+
