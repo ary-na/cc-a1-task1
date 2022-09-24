@@ -7,8 +7,8 @@ class Config(object):
     CSRF_ENABLED = True
     SECRET_KEY = '57e19ea558d4967a552d03deece34a70'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    os.environ[
-        "GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/ariannajafiyamchelo/Downloads/cc-a1-task1-362004-168dad8f4b0c.json"
+    # os.environ[
+    #     "GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/ariannajafiyamchelo/Downloads/cc-a1-task1-362004-168dad8f4b0c.json"
 
 
 class ProductionConfig(Config):

@@ -2,21 +2,25 @@ import datetime
 
 from flask import Blueprint, request, url_for, redirect, render_template, flash
 from flask import render_template, request, flash
-from google.cloud import datastore
+from google.cloud import datastore, ndb
 
-from .models import LoginForm, init_users
+from .models import LoginForm, init_users, User
 
 forum = Blueprint('forum', __name__, template_folder="templates/forum")
 
 
+@forum.record_once
+def seed_user_data(self):
+    client = ndb.Client()
+    with client.context():
+        query = User.query()
+        result = query.fetch(1, keys_only=True)
+        if result.__len__() == 0:
+            init_users()
+
+
 @forum.route('/')
 def index():
-    client = datastore.Client()
-    query = client.query(kind="user")
-    results = list(query.fetch(1))
-    if results.__len__() == 0:
-        init_users()
-
     return render_template('index.html')
 
 
