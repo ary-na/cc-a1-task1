@@ -38,3 +38,21 @@ https://cloud.google.com/datastore/docs/concepts/queries
 https://cloud.google.com/storage/docs/downloading-objects#prereq-code-samples
 
 https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/modelclass
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/datastore/entities
+
+https://googleapis.dev/python/python-ndb/latest/polymodel.html
+
+https://github.com/googleapis/python-ndb/issues/518
+
+https://googleapis.dev/python/python-ndb/latest/index.html
+
+https://github.com/googleapis/python-ndb/issues/568
+
+https://docs.google.com/document/d/1AefylbadN456_Z7BZOpZEXDq8cR8LYu7QgI7bt5V0Iw/mobilebasic
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queries
+
+https://stackoverflow.com/questions/25902690/typeerror-init-takes-0-positional-arguments-but-1-was-given
