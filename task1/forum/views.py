@@ -1,17 +1,13 @@
-import datetime
-
-from flask import Blueprint, request, url_for, redirect, render_template, flash
-from flask import render_template, request, flash
-from google.cloud import datastore, ndb
-
-from .models import LoginForm, init_users, User
+from flask import render_template, flash, Blueprint, redirect, session
+from google.cloud import ndb
+from .models import LoginForm, init_users, User, RegisterForm
 
 forum = Blueprint('forum', __name__, template_folder="templates/forum")
+client = ndb.Client()
 
 
 @forum.record_once
 def seed_user_data(self):
-    client = ndb.Client()
     with client.context():
         query = User.query()
         result = query.fetch(1, keys_only=True)
@@ -21,26 +17,40 @@ def seed_user_data(self):
 
 @forum.route('/')
 def index():
+    if not session.get('login_id'):
+        return redirect('/login')
     return render_template('index.html')
 
 
 @forum.route('/login', methods=['GET', 'POST'])
 def login():
-    form = LoginForm(request.form)
+    form = LoginForm()
+    if form.validate_on_submit():
 
-    if request.method == 'POST':
-        loginid = form.loginID.data
+        loginid = form.login_id.data
         password = form.password.data
 
-    if form.validate():
-        if form.loginID.data == 'admin' and form.password.data == 'admin':
-            flash('Hello ')
+        user = User.get_by_id(loginid)
+        if user and user.password == password:
+            session['login_id'] = user.login_id
+            session['user_name'] = user.user_name
+            return redirect('/')
         else:
-            flash('All fields required')
+            flash('ID or password is invalid.')
 
     return render_template('auth/login.html', form=form)
 
 
+@forum.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/login')
+
+
 @forum.route('/register', methods=['GET', 'POST'])
 def register():
-    return render_template('auth/register.html')
+    if session.get('login_id'):
+        return redirect('/')
+
+    form = RegisterForm()
+    return render_template('auth/register.html', form=form)
