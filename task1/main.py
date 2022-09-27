@@ -1,7 +1,12 @@
 from flask import Flask
+
 # blueprint import
 from forum.views import forum
+
 from google.cloud import ndb
+
+
+app = Flask(__name__)
 
 client = ndb.Client()
 
@@ -13,8 +18,6 @@ def ndb_wsgi_middleware(wsgi_app):
 
     return middleware
 
-
-app = Flask(__name__)
 
 # setup with the configuration provided
 app.config.from_object('config.DevelopmentConfig')

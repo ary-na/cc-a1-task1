@@ -9,8 +9,11 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SESSION_PERMANENT = False
     SESSION_TYPE = ''
+    MAX_CONTENT_LENGTH = 2000 * 2000
+    UPLOAD_EXTENSIONS = ['.jpg', '.png', '.jpeg']
+    UPLOAD_PATH = 'uploads'
     # os.environ[
-    #     "GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/ariannajafiyamchelo/Downloads/cc-a1-task1-362004-168dad8f4b0c.json"
+    #      "GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/ariannajafiyamchelo/Downloads/cc-a1-task1-362004-168dad8f4b0c.json"
 
 
 class ProductionConfig(Config):

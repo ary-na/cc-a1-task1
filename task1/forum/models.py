@@ -28,7 +28,7 @@ class RegisterForm(FlaskForm):
     login_id = StringField('ID', validators=[InputRequired()])
     user_name = StringField('User name', validators=[InputRequired()])
     password = StringField('Password', validators=[InputRequired()])
-    user_profile_image = FileField('Profile image')
+    user_profile_img = FileField('Profile image')
     submit = SubmitField('Register')
 
 

@@ -1,9 +1,14 @@
-from flask import render_template, flash, Blueprint, redirect, session
+
+from flask import render_template, flash, Blueprint, redirect, session, request
+from werkzeug.utils import secure_filename
+from task1.main import app
 from .models import LoginForm, init_users, User, RegisterForm
-from google.cloud import ndb
+from google.cloud import ndb, storage
+import os.path
 
 forum = Blueprint('forum', __name__, template_folder="templates/forum")
 client = ndb.Client()
+storage_client = storage.Client.from_service_account_json(json_credentials_path='/Users/ariannajafi/Downloads/cc-a1-task1-362004-897b592819f6.json')
 
 
 @forum.record_once
@@ -27,10 +32,10 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
 
-        loginid = form.login_id.data
+        login_id = form.login_id.data
         password = form.password.data
 
-        user = User.get_by_id(loginid)
+        user = User.get_by_id(login_id)
         if user and user.password == password:
             session['login_id'] = user.login_id
             session['user_name'] = user.user_name
@@ -53,4 +58,26 @@ def register():
         return redirect('/')
 
     form = RegisterForm()
+    if form.validate_on_submit():
+        login_id = form.login_id.data
+        user_name = form.user_name.data
+        password = form.password.data
+        user_profile_img = form.user_profile_img.data
+
+        # uploaded_file = request.files['file']
+        # file_name = secure_filename(uploaded_file.filename)
+        # if file_name != '':
+
+
+
+        bucket = storage_client.get_bucket('forum_image_bucket')
+        blob = bucket.blob(login_id+"_"+user_profile_img)
+        blob.upload_from_filename(os.path.join(app.config.DevelopmentConfig.UPLOAD_PATH, user_profile_img))
+
+        new_user = User(login_id=login_id, user_name=user_name, password=password,
+                        user_profile_img=user_profile_img, id=login_id)
+        new_user.put()
+
+        return redirect('/login')
+
     return render_template('auth/register.html', form=form)
