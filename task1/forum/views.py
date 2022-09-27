@@ -1,6 +1,6 @@
 from flask import render_template, flash, Blueprint, redirect, session
-from google.cloud import ndb
 from .models import LoginForm, init_users, User, RegisterForm
+from google.cloud import ndb
 
 forum = Blueprint('forum', __name__, template_folder="templates/forum")
 client = ndb.Client()
