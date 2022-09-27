@@ -23,7 +23,7 @@ https://pythonprogramming.net/flask-registration-tutorial/?completed=/flask-user
 
 https://pythonspot.com/flask-web-forms/
 
-https://www.onlinetutorialspoint.com/flask/python-flask-login-form-example.html
+
 
 https://www.codersdiaries.com/blog/flask-project-structure
 
@@ -33,7 +33,6 @@ https://cloud.google.com/datastore/docs/concepts/entities#datastore-datastore-lo
 
 https://cloud.google.com/datastore/docs/concepts/entities#datastore-datastore-update-python
 
-https://cloud.google.com/datastore/docs/concepts/queries
 
 https://cloud.google.com/storage/docs/downloading-objects#prereq-code-samples
 
@@ -53,6 +52,29 @@ https://docs.google.com/document/d/1AefylbadN456_Z7BZOpZEXDq8cR8LYu7QgI7bt5V0Iw/
 
 https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities
 
-https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queries
 
 https://stackoverflow.com/questions/25902690/typeerror-init-takes-0-positional-arguments-but-1-was-given
+
+https://stackoverflow.com/questions/22282316/python-how-to-import-from-an-init-py-file
+
+https://stackoverflow.com/questions/64451987/flaskform-not-validating-on-submit
+
+https://cloud.google.com/appengine/docs/standard/python3/migrating-to-cloud-ndb
+
+https://www.geeksforgeeks.org/how-to-use-flask-session-in-python-flask/
+
+https://www.onlinetutorialspoint.com/flask/python-flask-login-form-example.html
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queryclass
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entity-models
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queries
+
+https://cloud.google.com/datastore/docs/concepts/queries
+
+https://www.freecodecamp.org/news/how-to-authenticate-users-in-flask/
+
+https://pythonspot.com/login-authentication-with-flask/
+
+https://stackoverflow.com/questions/34738331/using-flask-wtforms-how-do-i-style-my-form-section-of-the-html
