@@ -1,14 +1,14 @@
-
-from flask import render_template, flash, Blueprint, redirect, session, request
+from flask import render_template, flash, Blueprint, redirect, session, request, send_from_directory
 from werkzeug.utils import secure_filename
-from task1.main import app
+from ..main import app
 from .models import LoginForm, init_users, User, RegisterForm
 from google.cloud import ndb, storage
 import os.path
 
 forum = Blueprint('forum', __name__, template_folder="templates/forum")
 client = ndb.Client()
-storage_client = storage.Client.from_service_account_json(json_credentials_path='/Users/ariannajafi/Downloads/cc-a1-task1-362004-897b592819f6.json')
+storage_client = storage.Client.from_service_account_json(
+    json_credentials_path='/Users/ariannajafi/Downloads/cc-a1-task1-362004-897b592819f6.json')
 
 
 @forum.record_once
@@ -62,22 +62,23 @@ def register():
         login_id = form.login_id.data
         user_name = form.user_name.data
         password = form.password.data
-        user_profile_img = form.user_profile_img.data
+        user_profile_img = request.files['user_profile_img']
 
-        # uploaded_file = request.files['file']
-        # file_name = secure_filename(uploaded_file.filename)
-        # if file_name != '':
+        if User.query(User.login_id == login_id).fetch():
+            flash('The ID already exists.')
+        elif User.query(User.user_name == user_name).fetch():
+            flash('The username already exists.')
+        else:
+            filename = secure_filename(user_profile_img.filename)
 
+            bucket = storage_client.get_bucket('forum_image_bucket')
+            blob = bucket.blob(login_id + "_" + filename)
+            blob.upload_from_file(user_profile_img, content_type='image/jpeg')
 
+            new_user = User(login_id=login_id, user_name=user_name, password=password,
+                            user_profile_img=filename, id=login_id)
+            new_user.put()
 
-        bucket = storage_client.get_bucket('forum_image_bucket')
-        blob = bucket.blob(login_id+"_"+user_profile_img)
-        blob.upload_from_filename(os.path.join(app.config.DevelopmentConfig.UPLOAD_PATH, user_profile_img))
-
-        new_user = User(login_id=login_id, user_name=user_name, password=password,
-                        user_profile_img=user_profile_img, id=login_id)
-        new_user.put()
-
-        return redirect('/login')
+            return redirect('/login')
 
     return render_template('auth/register.html', form=form)

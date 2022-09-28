@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="d-flex flex-column align-content-center justify-content-center border rounded">
-        <form class="p-2" action="" method="post">
+        <form class="p-2" action="" method="post" enctype="multipart/form-data">
             {{ form.csrf_token }}
             <div class="m-3">
                 <div>{{ form.login_id.label(class_='form-label text-secondary') }}</div>
