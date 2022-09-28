@@ -23,7 +23,7 @@ https://pythonprogramming.net/flask-registration-tutorial/?completed=/flask-user
 
 https://pythonspot.com/flask-web-forms/
 
-
+https://blog.miguelgrinberg.com/post/handling-file-uploads-with-flask
 
 https://www.codersdiaries.com/blog/flask-project-structure
 
@@ -52,6 +52,7 @@ https://docs.google.com/document/d/1AefylbadN456_Z7BZOpZEXDq8cR8LYu7QgI7bt5V0Iw/
 
 https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities
 
+https://stackoverflow.com/questions/50168932/how-to-upload-an-image-using-wtf-forms-quick-form
 
 https://stackoverflow.com/questions/25902690/typeerror-init-takes-0-positional-arguments-but-1-was-given
 
@@ -78,3 +79,7 @@ https://www.freecodecamp.org/news/how-to-authenticate-users-in-flask/
 https://pythonspot.com/login-authentication-with-flask/
 
 https://stackoverflow.com/questions/34738331/using-flask-wtforms-how-do-i-style-my-form-section-of-the-html
+
+https://python.tutorialink.com/importerror-cannot-import-name-app-from-partially-initialized-module-market-most-likely-due-to-a-circular-import/
+
+https://dzone.com/articles/upload-files-to-google-cloud
