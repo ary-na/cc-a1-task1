@@ -50,7 +50,7 @@ https://github.com/googleapis/python-ndb/issues/568
 
 https://docs.google.com/document/d/1AefylbadN456_Z7BZOpZEXDq8cR8LYu7QgI7bt5V0Iw/mobilebasic
 
-https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities
+
 
 https://stackoverflow.com/questions/50168932/how-to-upload-an-image-using-wtf-forms-quick-form
 
@@ -70,7 +70,7 @@ https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queryclass
 
 https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entity-models
 
-https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queries
+
 
 https://cloud.google.com/datastore/docs/concepts/queries
 
@@ -83,3 +83,32 @@ https://stackoverflow.com/questions/34738331/using-flask-wtforms-how-do-i-style-
 https://python.tutorialink.com/importerror-cannot-import-name-app-from-partially-initialized-module-market-most-likely-due-to-a-circular-import/
 
 https://dzone.com/articles/upload-files-to-google-cloud
+
+https://stackoverflow.com/questions/73681709/how-do-i-keep-the-value-of-a-filefield-after-submission
+
+https://www.w3schools.com/howto/howto_css_rounded_images.asp
+
+https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#code-samples
+
+https://stackoverflow.com/questions/19917503/flask-wtf-forms-adding-select-and-textarea
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities
+
+https://www.askpython.com/python/array/python-add-elements-to-an-array
+
+https://mdbootstrap.com/docs/standard/layout/vertical-alignment/
+
+https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568
+
+https://stackoverflow.com/questions/6036082/call-a-python-function-from-jinja2
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queries
+
+
+https://stackoverflow.com/questions/4770297/convert-utc-datetime-string-to-local-datetime
+
+https://www.codespeedy.com/change-the-format-of-date-in-python/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+
+https://stackoverflow.com/questions/50144411/bootstrap-4-flexbox-force-rows-to-fill-vertical-space-inside-col
