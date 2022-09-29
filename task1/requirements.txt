@@ -1,7 +1,8 @@
 Flask==2.2.2
 wtforms==3.0.1
 flask_wtf==1.0.1
-google-cloud-datastore==1.9.0
+google-cloud-datastore
 google-cloud-ndb==1.11.1
-google-cloud-storage==1.9.0
+google-cloud-storage
 werkzeug==2.2.2
+tzlocal==4.2

@@ -18,3 +18,17 @@ body {
   font-family: "helvetica", sans-serif;
   text-align: center;
 }
+
+.profile-img {
+  border-radius: 50%;
+  border: 1px solid #adb5bd;
+}
+
+.forum-profile-img {
+  border-radius: 50%;
+  border: 1px solid #adb5bd;
+}
+
+.forum-post-img {
+  border: 1px solid #adb5bd;
+}

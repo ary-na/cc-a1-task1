@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}User Profile{% endblock %}
+{% block content %}
+
+    <div class="flex flex-row mx-auto py-xl-5 my-xl-5 w-75">
+
+        <div class="border rounded mb-4">
+            <form class="p-2" action="" method="post">
+                {{ form.csrf_token }}
+                <div class="m-3 d-flex flex-row align-items-center justify-content-between">
+
+                        <div class="align-self-xxl-center">{{ form.old_password.label(class_='form-label text-secondary') }}</div>
+                        <div>{{ form.old_password(class_='form-control') }}</div>
+
+                        <div class="align-self-xxl-center">{{ form.new_password.label(class_='form-label text-secondary') }} </div>
+                        <div>{{ form.new_password(class_='form-control') }}</div>
+
+                        <div>{{ form.submit(class_='btn btn-success') }}</div>
+
+                </div>
+                <div class="m-3">
+                <span class="text-danger">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                </span>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+            {% for post in user.posts %}
+                <div class="col d-flex flex-wrap">
+                    <div class="card flex-grow-1">
+                        <div class="card-body text-start">
+                            <div class="d-flex align-items-center">
+                                {% if user.user_profile_img %}
+                                    <div>
+                                        <img class="forum-profile-img me-3"
+                                             src="{{ generate_url(user.user_profile_img) }}"
+                                             alt="User profile image" width="55"
+                                             height="55">
+                                    </div>
+                                {% endif %}
+                                <div>
+                                    <h6>{{ user.user_name }}</h6>
+                                    <span><small
+                                            class="text-muted fw-light">{{ convert_utc_to_local_time(post.date_and_time) }}</small></span>
+                                </div>
+
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                {% if post.user_post_img %}
+                                    <div class="align-self-center mb-3">
+                                        <img class="forum-post-img img-fluid rounded"
+                                             src="{{ generate_url(post.user_post_img) }}"
+                                             alt="Post image" width="200">
+                                    </div>
+                                {% endif %}
+                                <div><h5 class="card-title">{{ post.subject }}</h5></div>
+                                <div><p class="card-text">{{ post.message_text }}</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
