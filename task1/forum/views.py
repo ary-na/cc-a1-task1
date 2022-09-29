@@ -29,7 +29,7 @@ def index():
         session['user_profile_img_url'] = user_profile_img_url
 
     query = User.query(User.posts.date_and_time <= datetime.datetime.utcnow()).order(-User.posts.date_and_time)
-    result = query.fetch(10)
+    result = query.fetch(5)
 
     return render_template('index.html', users=result, generate_url=generate_url,
                            convert_utc_to_local_time=convert_utc_to_local_time)

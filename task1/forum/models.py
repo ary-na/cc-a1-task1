@@ -6,10 +6,10 @@ from google.cloud import ndb, storage
 from wtforms.validators import InputRequired
 from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField
 
-# storage_client = storage.Client.from_service_account_json(
-#     json_credentials_path='task1/cc-a1-task1.json')
+storage_client = storage.Client.from_service_account_json(
+    json_credentials_path='task1/cc-a1-task1.json')
 
-storage_client = storage.Client()
+# storage_client = storage.Client()
 
 
 class Post(ndb.Model):
