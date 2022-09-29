@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Edit Post{% endblock %}
+{% block content %}
+
+    <div class="d-flex flex-column m-auto align-content-center justify-content-center border rounded">
+        <form class="p-2" action="" method="post" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            <div class="m-3">
+                <div>{{ form.subject.label(class_='form-label text-secondary') }}</div>
+                <div>{{ form.subject(class_='form-control', value=post.subject) }}</div>
+            </div>
+            <div class="m-3">
+                <div>{{ form.message_text.label(class_='form-label text-secondary') }}</div>
+                <div>{{ form.message_text(class_='form-control') }}</div>
+            </div>
+            <div class="m-3">
+                <div class="align-self-center mb-3">
+                    <img class="forum-post-img img-fluid rounded"
+                         src="{{ generate_url(post.user_post_img) }}"
+                         alt="Post image" width="100">
+                </div>
+                <div>{{ form.user_post_img.label(class_='form-label text-secondary') }} </div>
+                <div>{{ form.user_post_img(class_='form-control') }}</div>
+            </div>
+            <div class="m-3">
+                <span class="text-danger">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                </span>
+            </div>
+            <div class="m-3">
+                {{ form.submit(class_='btn btn-success') }}
+            </div>
+            <div class="m-3 text-center text-secondary">Return to
+                <a href="/" class="text-decoration-none">Forum</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}
