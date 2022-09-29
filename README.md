@@ -1,12 +1,10 @@
 # cc-a1-task1
 
-
 RMIT University - Academic Integrity Warning:
 > "For serious breaches of academic integrity, students can be charged with academic misconduct. Possible penalties include **cancellation of results** and **expulsion resulting in the cancellation of a student's program**."
 For more information visit [Academic Integrity at RMIT](https://www.rmit.edu.au/students/my-course/assessment-results/academic-integrity)
 
 ## References
-
 
 [1] Mark Otto and Bootstrap contributors, "Bootstrap", Getbootstrap.com, 2022. [Online]. Available: https://getbootstrap.com. [Accessed: 29- Sep- 2022].
 
@@ -80,47 +78,42 @@ For more information visit [Academic Integrity at RMIT](https://www.rmit.edu.au/
 
 [36] "Python", Python.tutorialink.com, 2022. [Online]. Available: https://python.tutorialink.com/importerror-cannot-import-name-app-from-partially-initialized-module-market-most-likely-due-to-a-circular-import/. [Accessed: 29- Sep- 2022].
 
+[37] M. Chhabra, "Upload Files to Google Cloud Storage with Python - DZone Cloud", dzone.com, 2022. [Online]. Available: https://dzone.com/articles/upload-files-to-google-cloud. [Accessed: 29- Sep- 2022].
 
+[38] mwhite, "How do I keep the value of a FileField after submission?", Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/73681709/how-do-i-keep-the-value-of-a-filefield-after-submission. [Accessed: 29- Sep- 2022].
 
+[39] "How To Create Rounded Images", W3schools.com, 2022. [Online]. Available: https://www.w3schools.com/howto/howto_css_rounded_images.asp. [Accessed: 29- Sep- 2022].
 
+[40] "V4 signing process with Cloud Storage tools  |  Google Cloud", Google Cloud, 2022. [Online]. Available: https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#code-samples. [Accessed: 29- Sep- 2022].
 
-https://dzone.com/articles/upload-files-to-google-cloud
+[41] P. Pogorzelski, "Flask WTF-forms adding select and textarea", Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/19917503/flask-wtf-forms-adding-select-and-textarea. [Accessed: 29- Sep- 2022].
 
-https://stackoverflow.com/questions/73681709/how-do-i-keep-the-value-of-a-filefield-after-submission
+[42] M. Nascimento and J. Hanley, "Unable to assign iam.serviceAccounts.signBlob permission", Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/57564505/unable-to-assign-iam-serviceaccounts-signblob-permission. [Accessed: 29- Sep- 2022].
 
-https://www.w3schools.com/howto/howto_css_rounded_images.asp
+[43] "Python add elements to an Array - AskPython", AskPython, 2022. [Online]. Available: https://www.askpython.com/python/array/python-add-elements-to-an-array. [Accessed: 29- Sep- 2022].
 
-https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#code-samples
+[44] "Bootstrap Vertical alignment - examples & tutorial", MDB - Material Design for Bootstrap, 2022. [Online]. Available: https://mdbootstrap.com/docs/standard/layout/vertical-alignment/. [Accessed: 29- Sep- 2022].
 
-https://stackoverflow.com/questions/19917503/flask-wtf-forms-adding-select-and-textarea
+[45] h. Alexej, "list of pytz time zones", Gist, 2022. [Online]. Available: https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568. [Accessed: 29- Sep- 2022].
 
-https://stackoverflow.com/questions/57564505/unable-to-assign-iam-serviceaccounts-signblob-permission
+[46] L. Stanley, R. Cowie, Никита Шишкин and gerardw, "Call a python function from jinja2", Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/6036082/call-a-python-function-from-jinja2. [Accessed: 29- Sep- 2022].
 
-https://www.askpython.com/python/array/python-add-elements-to-an-array
+[47] "NDB Queries  |  App Engine standard environment for Python 2  |  Google Cloud", Google Cloud, 2022. [Online]. Available: https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queries. [Accessed: 29- Sep- 2022].
 
-https://mdbootstrap.com/docs/standard/layout/vertical-alignment/
+[48] J. Holloway, D. Foster, M. Tolonen and jfs, "Convert UTC datetime string to local datetime", Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/4770297/convert-utc-datetime-string-to-local-datetime. [Accessed: 29- Sep- 2022].
 
-https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568
+[49] R. Vuta, "How to change the format of date in Python", codespeedy, 2022. [Online]. Available: https://www.codespeedy.com/change-the-format-of-date-in-python/. [Accessed: 29- Sep- 2022].
 
-https://stackoverflow.com/questions/6036082/call-a-python-function-from-jinja2
+[50] "Aligning items in a flex container - CSS&colon; Cascading Style Sheets | MDN", Developer.mozilla.org, 2022. [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container. [Accessed: 29- Sep- 2022].
 
-https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queries
+[51] J. Moran, Zim, Giacomo1968 and mahan, "Bootstrap 4 Flexbox force rows to fill vertical space inside col", Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/50144411/bootstrap-4-flexbox-force-rows-to-fill-vertical-space-inside-col. [Accessed: 29- Sep- 2022].
 
+[52] R. Gurung, E. Popal and davidism, "Passing variables through URL to a flask app", Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/24052362/passing-variables-through-url-to-a-flask-app. [Accessed: 29- Sep- 2022].
 
-https://stackoverflow.com/questions/4770297/convert-utc-datetime-string-to-local-datetime
+[53] Rohit, "Find index of element in array Python", Tutorial, 2022. [Online]. Available: https://tutorial.eyehunts.com/python/find-index-of-element-in-array-python/. [Accessed: 29- Sep- 2022].
 
-https://www.codespeedy.com/change-the-format-of-date-in-python/
+[54] R. Tripathi, I. Kaznacheev, Kerby82 and Gabriel_Ferreira, "How to 'update' or 'overwrite' a python list", Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/25410507/how-to-update-or-overwrite-a-python-list. [Accessed: 29- Sep- 2022].
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+[55] "Creating, Retrieving, Updating, and Deleting Entities  |  App Engine standard environment for Python 2  |  Google Cloud", Google Cloud, 2022. [Online]. Available: https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities. [Accessed: 29- Sep- 2022].
 
-https://stackoverflow.com/questions/50144411/bootstrap-4-flexbox-force-rows-to-fill-vertical-space-inside-col
-
-https://stackoverflow.com/questions/24052362/passing-variables-through-url-to-a-flask-app
-
-https://tutorial.eyehunts.com/python/find-index-of-element-in-array-python/
-
-https://stackoverflow.com/questions/25410507/how-to-update-or-overwrite-a-python-list
-
-https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities
-
-https://stackoverflow.com/questions/33545520/dynamic-default-value-setting-for-a-flask-form-field
+[56] r-m-n and pogo, "Dynamic default value setting for a flask form field", Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/33545520/dynamic-default-value-setting-for-a-flask-form-field. [Accessed: 29- Sep- 2022].
