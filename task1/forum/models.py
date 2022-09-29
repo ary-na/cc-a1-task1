@@ -1,17 +1,16 @@
-import datetime
-
 import pytz
+import datetime
 import tzlocal as tzlocal
 from flask_wtf import FlaskForm
 from google.cloud import ndb, storage
-from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField
 from wtforms.validators import InputRequired
+from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField
 
-storage_client = storage.Client.from_service_account_json(
-    json_credentials_path='/Users/ariannajafi/Downloads/cc-a1-task1-362004-897b592819f6.json')
+# storage_client = storage.Client.from_service_account_json(
+#     json_credentials_path='task1/cc-a1-task1.json')
 
+storage_client = storage.Client()
 
-# storage_client = storage.Client()
 
 class Post(ndb.Model):
     subject = ndb.StringProperty()

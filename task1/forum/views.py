@@ -1,18 +1,10 @@
-import datetime
-
 from flask import render_template, flash, Blueprint, redirect, session, request
 from werkzeug.utils import secure_filename
-from .models import LoginForm, init_users, User, RegisterForm, upload_profile_img, generate_url, CreatePostForm, \
-    upload_post_img, Post, convert_utc_to_local_time, EditPasswordForm, EditPostForm
-from google.cloud import ndb, storage
+from .models import *
+from google.cloud import ndb
 
 forum = Blueprint('forum', __name__, template_folder="templates/forum")
 client = ndb.Client()
-# storage_client = storage.Client.from_service_account_json(
-#     json_credentials_path='/Users/ariannajafi/Downloads/cc-a1-task1-362004-897b592819f6.json')
-
-
-storage_client = storage.Client()
 
 
 @forum.record_once

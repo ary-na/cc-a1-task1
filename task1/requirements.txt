@@ -5,4 +5,4 @@ google-cloud-datastore
 google-cloud-ndb==1.11.1
 google-cloud-storage
 werkzeug==2.2.2
-tzlocal==4.2
+tzlocal
