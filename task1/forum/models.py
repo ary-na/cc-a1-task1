@@ -55,6 +55,13 @@ class CreatePostForm(FlaskForm):
     submit = SubmitField('Create')
 
 
+class EditPostForm(FlaskForm):
+    subject = StringField('Subject', validators=[InputRequired()])
+    message_text = TextAreaField('Message')
+    user_post_img = FileField('Update image')
+    submit = SubmitField('Update')
+
+
 def upload_profile_img(user_profile_img, login_id, filename):
     bucket = storage_client.bucket('forum_image_bucket')
     blob = bucket.blob(login_id + "_" + filename)
