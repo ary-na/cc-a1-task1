@@ -70,7 +70,7 @@ https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queryclass
 
 https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entity-models
 
-
+https://stackoverflow.com/questions/44569040/change-color-of-flask-flash-messages
 
 https://cloud.google.com/datastore/docs/concepts/queries
 
@@ -92,7 +92,7 @@ https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#c
 
 https://stackoverflow.com/questions/19917503/flask-wtf-forms-adding-select-and-textarea
 
-https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities
+
 
 https://www.askpython.com/python/array/python-add-elements-to-an-array
 
@@ -112,3 +112,13 @@ https://www.codespeedy.com/change-the-format-of-date-in-python/
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 
 https://stackoverflow.com/questions/50144411/bootstrap-4-flexbox-force-rows-to-fill-vertical-space-inside-col
+
+https://stackoverflow.com/questions/24052362/passing-variables-through-url-to-a-flask-app
+
+https://tutorial.eyehunts.com/python/find-index-of-element-in-array-python/
+
+https://stackoverflow.com/questions/25410507/how-to-update-or-overwrite-a-python-list
+
+https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities
+
+https://stackoverflow.com/questions/33545520/dynamic-default-value-setting-for-a-flask-form-field
