@@ -92,7 +92,7 @@ https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#c
 
 https://stackoverflow.com/questions/19917503/flask-wtf-forms-adding-select-and-textarea
 
-
+https://stackoverflow.com/questions/57564505/unable-to-assign-iam-serviceaccounts-signblob-permission
 
 https://www.askpython.com/python/array/python-add-elements-to-an-array
 
