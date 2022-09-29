@@ -8,11 +8,11 @@ from google.cloud import ndb, storage
 
 forum = Blueprint('forum', __name__, template_folder="templates/forum")
 client = ndb.Client()
-storage_client = storage.Client.from_service_account_json(
-    json_credentials_path='/Users/ariannajafi/Downloads/cc-a1-task1-362004-897b592819f6.json')
+# storage_client = storage.Client.from_service_account_json(
+#     json_credentials_path='/Users/ariannajafi/Downloads/cc-a1-task1-362004-897b592819f6.json')
 
 
-# storage_client = storage.Client()
+storage_client = storage.Client()
 
 
 @forum.record_once
