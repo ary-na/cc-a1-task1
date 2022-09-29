@@ -1,10 +1,9 @@
 import datetime
 
-import pytz
 from flask import render_template, flash, Blueprint, redirect, session, request
 from werkzeug.utils import secure_filename
 from .models import LoginForm, init_users, User, RegisterForm, upload_profile_img, generate_url, CreatePostForm, \
-    upload_post_img, Post, convert_utc_to_local_time, EditPasswordForm
+    upload_post_img, Post, convert_utc_to_local_time, EditPasswordForm, EditPostForm
 from google.cloud import ndb, storage
 
 forum = Blueprint('forum', __name__, template_folder="templates/forum")
@@ -120,9 +119,9 @@ def profile():
         if user.password == old_password:
             user.password = new_password
             user.put()
-            flash('Password successfully updated.')
+            flash('Password successfully updated.', 'success')
         else:
-            flash('The old password is incorrect.')
+            flash('The old password is incorrect.', 'error')
 
     return render_template('profile.html', user=user, form=form, generate_url=generate_url,
                            convert_utc_to_local_time=convert_utc_to_local_time)
@@ -157,3 +156,38 @@ def create_post():
         return redirect('/')
 
     return render_template('post/create.html', form=form)
+
+
+@forum.route('/edit/<post_index>', methods=['GET', 'POST'])
+def edit_post(post_index):
+    if not session.get('login_id'):
+        return redirect('/login')
+
+    user = User.get_by_id(session['login_id'])
+
+    form = EditPostForm()
+
+    if form.validate_on_submit():
+        new_subject = form.subject.data
+        new_message_text = form.message_text.data
+        new_user_post_img = request.files['user_post_img']
+
+        filename = secure_filename(new_user_post_img.filename)
+        post_date_and_time = datetime.datetime.utcnow()
+
+        if filename != '':
+            upload_post_img(new_user_post_img, user.login_id, str(post_date_and_time), filename)
+            user_post_img_filename = user.login_id + '_' + str(post_date_and_time) + '_' + filename
+        else:
+            user_post_img_filename = user.posts[int(post_index)].user_post_img
+
+        user.posts[int(post_index)].subject = new_subject
+        user.posts[int(post_index)].message_text = new_message_text
+        user.posts[int(post_index)].user_post_img = user_post_img_filename
+        user.posts[int(post_index)].date_and_time = post_date_and_time
+
+        user.put()
+        return redirect('/')
+
+    form.message_text.data = user.posts[int(post_index)].message_text
+    return render_template('post/edit.html', form=form, post=user.posts[int(post_index)], generate_url=generate_url)

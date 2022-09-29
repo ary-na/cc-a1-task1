@@ -8,7 +8,7 @@
             {% for user in users %}
                 {% for post in user.posts %}
                     <div class="col d-flex flex-wrap">
-                        <div class="card flex-grow-1">
+                        <div class="card shadow-sm flex-grow-1">
                             <div class="card-body text-start">
                                 <div class="d-flex align-items-center">
                                     {% if user.user_profile_img %}
@@ -21,8 +21,7 @@
                                     {% endif %}
                                     <div>
                                         <h6>{{ user.user_name }}</h6>
-                                        <span><small
-                                                class="text-muted fw-light">{{ convert_utc_to_local_time(post.date_and_time) }}</small></span>
+                                        <span><small class="text-muted fw-light">{{ convert_utc_to_local_time(post.date_and_time) }}</small></span>
                                     </div>
 
                                 </div>

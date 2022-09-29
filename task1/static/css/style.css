@@ -32,3 +32,11 @@ body {
 .forum-post-img {
   border: 1px solid #adb5bd;
 }
+
+.error {
+  color: #dc3545;
+}
+
+.success {
+  color: #198754;
+}
