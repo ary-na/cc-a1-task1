@@ -4,6 +4,14 @@ RMIT University - Academic Integrity Warning:
 > "For serious breaches of academic integrity, students can be charged with academic misconduct. Possible penalties include **cancellation of results** and **expulsion resulting in the cancellation of a student's program**."
 For more information visit [Academic Integrity at RMIT](https://www.rmit.edu.au/students/my-course/assessment-results/academic-integrity)
 
+## Screen Shots
+
+**Home page** screenshot
+![Home page](task1/static/img/home.png)
+
+**User profile page** screenshot
+![User profile page](task1/static/img/profile.png)
+
 [App Engine app link](https://cc-a1-task1-362004.ts.r.appspot.com/login)
 
 ## References
