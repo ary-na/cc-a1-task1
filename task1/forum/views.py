@@ -7,6 +7,107 @@ forum = Blueprint('forum', __name__, template_folder="templates/forum")
 client = ndb.Client()
 
 
+# Code sourced and adapted from:
+
+# [4] R. Simon, "Flask application with multiple views, how does 'flask run' work in this case?", Stack Overflow,
+# 2022. [Online]. Available: https://stackoverflow.com/questions/49734284/flask-application-with-multiple-views-how
+# -does-flask-run-work-in-this-case. [Accessed: 29- Sep- 2022].
+#
+# [5] "Large Applications as Packages — Flask Documentation (2.0.x)", Flask.palletsprojects.com, 2022. [Online].
+# Available: https://flask.palletsprojects.com/en/2.0.x/patterns/packages/. [Accessed: 29- Sep- 2022].
+#
+# [6] "Project Layout — Flask Documentation (2.1.x)", Flask.palletsprojects.com, 2022. [Online]. Available:
+# https://flask.palletsprojects.com/en/2.1.x/tutorial/layout/. [Accessed: 29- Sep- 2022].
+#
+# [7] Harrison, "Python Programming Tutorials", Pythonprogramming.net, 2022. [Online]. Available:
+# https://pythonprogramming.net/flask-registration-tutorial/?completed=/flask-user-registration-form-tutorial/. [
+# Accessed: 29- Sep- 2022].
+
+# [23] D. Robinson, Z. Maret and T. Orozco, "TypeError: __init__() takes 0 positional arguments but 1 was given",
+# Stack Overflow, 2022. [Online]. Available:
+# https://stackoverflow.com/questions/25902690/typeerror-init-takes-0-positional-arguments-but-1-was-given. [
+# Accessed: 29- Sep- 2022].
+#
+# [24] tynn, "Python: How to import from an __init__.py file?", Stack Overflow, 2022. [Online]. Available:
+# https://stackoverflow.com/questions/22282316/python-how-to-import-from-an-init-py-file. [Accessed: 29- Sep- 2022].
+#
+# [25] D. Smith, "FlaskForm not Validating on Submit", Stack Overflow, 2022. [Online]. Available:
+# https://stackoverflow.com/questions/64451987/flaskform-not-validating-on-submit. [Accessed: 29- Sep- 2022].
+
+# [27] yameenvinchu, "How to use Flask-Session in Python Flask ? - GeeksforGeeks", GeeksforGeeks, 2022. [Online].
+# Available: https://www.geeksforgeeks.org/how-to-use-flask-session-in-python-flask/. [Accessed: 29- Sep- 2022].
+#
+# [28] chandrashekhar, "Python - Flask Login Form Example", onlinetutorialspoint, 2022. [Online]. Available:
+# https://www.onlinetutorialspoint.com/flask/python-flask-login-form-example.html. [Accessed: 29- Sep- 2022].
+#
+# [29] "NDB Query Class  |  App Engine standard environment for Python 2  |  Google Cloud", Google Cloud,
+# 2022. [Online]. Available: https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/queryclass. [
+# Accessed: 29- Sep- 2022].
+#
+# [30] "Creating Entity Models  |  App Engine standard environment for Python 2  |  Google Cloud", Google Cloud,
+# 2022. [Online]. Available: https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entity
+# -models. [Accessed: 29- Sep- 2022].
+#
+# [31] R. Simon, "Change color of flask.flash messages", Stack Overflow, 2022. [Online]. Available:
+# https://stackoverflow.com/questions/44569040/change-color-of-flask-flash-messages. [Accessed: 29- Sep- 2022].
+#
+# [32] "Datastore Queries  |  Cloud Datastore Documentation  |  Google Cloud", Google Cloud, 2022. [Online].
+# Available: https://cloud.google.com/datastore/docs/concepts/queries. [Accessed: 29- Sep- 2022].
+#
+# [33] O. Elijah Ochieng, "How to Authenticate Users in Flask with Flask-Login", freeCodeCamp.org, 2022. [Online].
+# Available: https://www.freecodecamp.org/news/how-to-authenticate-users-in-flask/. [Accessed: 29- Sep- 2022].
+#
+# [34] Frank, "Login authentication with Flask", pythonspot, 2022. [Online]. Available:
+# https://pythonspot.com/login-authentication-with-flask/. [Accessed: 29- Sep- 2022].
+#
+# [35] davidism, "Using Flask-WTForms, how do I style my form section of the html?", Stack Overflow, 2022. [Online].
+# Available: https://stackoverflow.com/questions/34738331/using-flask-wtforms-how-do-i-style-my-form-section-of-the
+# -html. [Accessed: 29- Sep- 2022].
+#
+# [36] "Python", Python.tutorialink.com, 2022. [Online]. Available:
+# https://python.tutorialink.com/importerror-cannot-import-name-app-from-partially-initialized-module-market-most
+# -likely-due-to-a-circular-import/. [Accessed: 29- Sep- 2022].
+#
+# [37] M. Chhabra, "Upload Files to Google Cloud Storage with Python - DZone Cloud", dzone.com, 2022. [Online].
+# Available: https://dzone.com/articles/upload-files-to-google-cloud. [Accessed: 29- Sep- 2022].
+#
+# [38] mwhite, "How do I keep the value of a FileField after submission?", Stack Overflow, 2022. [Online]. Available:
+# https://stackoverflow.com/questions/73681709/how-do-i-keep-the-value-of-a-filefield-after-submission. [Accessed:
+# 29- Sep- 2022].
+#
+# [39] "How To Create Rounded Images", W3schools.com, 2022. [Online]. Available:
+# https://www.w3schools.com/howto/howto_css_rounded_images.asp. [Accessed: 29- Sep- 2022].
+#
+# [40] "V4 signing process with Cloud Storage tools  |  Google Cloud", Google Cloud, 2022. [Online]. Available:
+# https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#code-samples. [Accessed: 29- Sep-
+# 2022].
+#
+# [41] P. Pogorzelski, "Flask WTF-forms adding select and textarea", Stack Overflow, 2022. [Online]. Available:
+# https://stackoverflow.com/questions/19917503/flask-wtf-forms-adding-select-and-textarea. [Accessed: 29- Sep- 2022].
+
+# [43] "Python add elements to an Array - AskPython", AskPython, 2022. [Online]. Available:
+# https://www.askpython.com/python/array/python-add-elements-to-an-array. [Accessed: 29- Sep- 2022].
+
+# [53] Rohit, "Find index of element in array Python", Tutorial, 2022. [Online]. Available:
+# https://tutorial.eyehunts.com/python/find-index-of-element-in-array-python/. [Accessed: 29- Sep- 2022].
+#
+# [54] R. Tripathi, I. Kaznacheev, Kerby82 and Gabriel_Ferreira, "How to 'update' or 'overwrite' a python list",
+# Stack Overflow, 2022. [Online]. Available: https://stackoverflow.com/questions/25410507/how-to-update-or-overwrite
+# -a-python-list. [Accessed: 29- Sep- 2022].
+#
+# [55] "Creating, Retrieving, Updating, and Deleting Entities  |  App Engine standard environment for Python 2  |
+# Google Cloud", Google Cloud, 2022. [Online]. Available:
+# https://cloud.google.com/appengine/docs/legacy/standard/python/ndb/creating-entities. [Accessed: 29- Sep- 2022].
+#
+# [56] r-m-n and pogo, "Dynamic default value setting for a flask form field", Stack Overflow, 2022. [Online].
+# Available: https://stackoverflow.com/questions/33545520/dynamic-default-value-setting-for-a-flask-form-field. [
+# Accessed: 29- Sep- 2022].
+#
+# [57] "Royalty Free Pictures [HD] | Download Free Images on Unsplash", Unsplash.com, 2022. [Online]. Available:
+# https://unsplash.com/images/stock/royalty-free. [Accessed: 29- Sep- 2022].
+#
+# [58] Loremipsum.io, 2022. [Online]. Available: https://loremipsum.io/generator/. [Accessed: 29- Sep- 2022].
+
 @forum.record_once
 def seed_user_data(self):
     with client.context():
@@ -28,8 +129,8 @@ def index():
 
         session['user_profile_img_url'] = user_profile_img_url
 
-    query = User.query(User.posts.date_and_time <= datetime.datetime.utcnow()).order(-User.posts.date_and_time)
-    result = query.fetch(5)
+    query = User.query(User.posts.date_and_time < datetime.datetime.utcnow()).order(-User.posts.date_and_time)
+    result = query.fetch(8)
 
     return render_template('index.html', users=result, generate_url=generate_url,
                            convert_utc_to_local_time=convert_utc_to_local_time)
@@ -112,6 +213,7 @@ def profile():
             user.password = new_password
             user.put()
             flash('Password successfully updated.', 'success')
+            return redirect('/logout')
         else:
             flash('The old password is incorrect.', 'error')
 
