@@ -12,7 +12,7 @@ For more information visit [Academic Integrity at RMIT](https://www.rmit.edu.au/
 **User profile page** screenshot
 ![User profile page](task1/static/img/profile.png)
 
-[App Engine app link](https://cc-a1-task1-362004.ts.r.appspot.com/login)
+~~[App Engine app link](https://cc-a1-task1-362004.ts.r.appspot.com/login)~~
 
 ## References
 
